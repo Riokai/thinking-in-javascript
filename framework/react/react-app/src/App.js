@@ -1,9 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Demo from './Demo'
 
 class App extends Component {
+  static childContextTypes = {
+    bgColor: PropTypes.string
+  }
+
+  getChildContext() {
+    return {
+      bgColor: 'red'
+    }
+  }
+
   constructor(props) {
     super(props)
 
