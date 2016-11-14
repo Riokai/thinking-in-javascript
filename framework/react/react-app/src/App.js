@@ -10,7 +10,7 @@ class App extends Component {
 
   getChildContext() {
     return {
-      bgColor: 'red'
+      bgColor: this.state.bgColor
     }
   }
 
@@ -18,7 +18,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-      num: 0
+      num: 0,
+      bgColor: 'red'
     }
   }
 
@@ -26,6 +27,12 @@ class App extends Component {
     setInterval(() => {
       this.setState({
         num: this.state.num + 1
+      })
+    }, 1000)
+
+    setTimeout(() => {
+      this.setState({
+        bgColor: 'green'
       })
     }, 1000)
   }
