@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import { show } from './service/message'
 
 const Button = (props, context) => {
   return (
@@ -9,6 +10,7 @@ const Button = (props, context) => {
         top: -2,
         background: context.bgColor
       }}
+      onClick={show}
     >123</button>
   )
 }
